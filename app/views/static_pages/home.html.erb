@@ -1,2 +1,72 @@
-<% provide(:title, 'Home') %>
-<h1>Sample App</h1>
+<% provide(:title, '') %>
+<!-- Carousel -->
+<div id="myCarousel" class="carousel slide">
+	<!--Indicators-->
+	<ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+		<li data-target="#myCarousel" data-slide-to="2"></li>
+	</ol>				
+
+	<!--Wrapper for slides-->
+	<div class="carousel-inner">
+
+		<!--First item-->
+		<div class="item active">
+			<%= image_tag('max0.png', :class => "image") %>
+			<div class="container">
+				<div class="carousel-caption">
+					<h1>Welcome to the Sample App</h1>
+					<h2>
+					    This is the home page for the
+					    <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
+					    sample application.
+					</h2>
+					<p><%= link_to "Sign up now!", '#', class: "btn btn-large btn-custom" %></p>
+				</div>
+			</div>	
+		</div>
+
+		<!--Second item-->
+		<div class="item">
+			<%= image_tag('max1.png', :class => "image") %>
+			<div class="container">
+				<div class="carousel-caption">
+					<h1>Welcome to the Sample App</h1>
+					<p class="lead">
+					    This is the home page for the
+					    <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
+					    sample application.
+					</p>
+					<p><%= link_to "Sign up now!", '#', class: "btn btn-large btn-custom" %></p>
+				</div>
+			</div>	
+		</div>
+		
+		<!--Third item-->
+		<div class="item">
+			<%= image_tag('max2.png', :class => "image") %>
+			<div class="container">
+				<div class="carousel-caption">
+					<h1>Welcome to the Sample App</h1>
+					<h2>
+					    This is the home page for the
+					    <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
+					    sample application.
+					</h2>
+					<p><%= link_to "Sign up now!", '#', class: "btn btn-large btn-custom" %></p>
+				</div>
+			</div>	
+		</div>
+
+	</div><!--/.carousel-inner-->
+
+	<!-- Controls -->
+	<a class="left carousel-control" href="#myCarousel" data-slide="prev"><%= fa_icon("prev") %></a>
+	<a class="right carousel-control" href="#myCarousel" data-slide="next"><%= fa_icon("next") %></a>
+
+</div><!--/.carousel-->	
+
+
+<%= link_to image_tag("rails.png", alt: "Rails", size: "48x48", class:"img-circle"), 'http://rubyonrails.org/' %>
+

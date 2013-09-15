@@ -14,3 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+// Include all holder`s, font-awesome`s, twitter's javascripts
+//= require twitter/bootstrap
+//= require holder
+//= font-awesome

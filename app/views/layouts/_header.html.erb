@@ -1,0 +1,34 @@
+<div class="navbar-wrapper">
+	<div class="container">
+		<header class="navbar navbar-static-top navbar-inverse">				
+			<nav class="container">
+				
+				<!-- Brand and toggle get grouped for better mobile display -->
+			  	<div class="navbar-header">
+			    	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				    <%= link_to "sample app", root_path, id: "logo", class:"navbar-brand" %>
+				</div>
+
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-ex1-collapse">
+				    <ul class="nav navbar-nav navbar-right">
+					    <li class: "active">
+						    <%= link_to "Home", root_path  %>
+				    	</li>
+						<li>
+							<%= link_to " Help", help_path %>
+						</li>
+						<li>
+							<%= link_to " Sign in","#" %>
+						</li>
+					</ul>		
+				</div><!-- /.navbar-collapse -->
+			</nav><!-- /.container -->
+		</header>
+	</div><!-- /.container-->
+</div><!--/.navbar-wrapper-->

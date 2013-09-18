@@ -1,11 +1,16 @@
-$gray_medium_light: #eaeaea;
-$gray_light: #999;
-$gray_dark: #C09853;
+$gray-medium-light: #eaeaea;
+$gray-light: #999;
+$gray-dark: #C09853;
 $white: #fff;
-$navbar_background_highlight:	$gray_dark;
-$navbar_link_color: lighten($gray_light, 25%);
-$navbar_link_color_hover:	$white;
+$navbar-background-highlight:	$gray-dark;
+$navbar-link-color: lighten($gray-light, 25%);
+$navbar-link-color_hover:	$white;
 
+@mixin box_sizing {
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box;
+}
 /* -------------universal----------------------------- */
 
 html {
@@ -38,6 +43,7 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
 	line-height: 1;
 }
+
 
 h1 {
 	font-size: 3em;
@@ -101,6 +107,7 @@ p {
 			left: 0;
 			min-width: 100%;
 			height: 400px;
+			
 		}
 		
 	}
@@ -133,8 +140,16 @@ footer {
 }
 
 
-/*-----------CUSTOMIZE------------------*/
 
+/* miscellaneous */
+
+.debug_dump {
+	clear: both;
+	float: left;
+	width: 100%;
+	margin-top: 45px;
+	@include box_sizing;
+}
 
 /*Form style*/
 /* Custom Button */

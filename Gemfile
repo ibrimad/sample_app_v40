@@ -4,10 +4,13 @@ ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
+gem 'bcrypt-ruby', '3.0.1'
 
 gem 'anjlab-bootstrap-rails', '>= 3.0.0.0', :require => 'bootstrap-rails'
 gem "font-awesome-rails"
 gem "holder_rails", "~> 2.0.0"
+
+# gem "strong_parameters"
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do
@@ -18,6 +21,10 @@ group :development, :test do
 	gem 'spring'
 
 end
+
+group :development do
+	gem 'annotate'
+end	
 
 group :test do
 	gem 'selenium-webdriver'

@@ -3,9 +3,9 @@
 <div id="myCarousel" class="carousel slide">
 	<!--Indicators-->
 	<ol class="carousel-indicators">
-		<li data-target="#myCarousel" class="active"></li>
-		<li data-target="#myCarousel"></li>
-		<li data-target="#myCarousel"></li>
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+		<li data-target="#myCarousel" data-slide-to="2"></li>
 	</ol>				
 
 	<!--Wrapper for slides-->
@@ -22,7 +22,7 @@
 					    <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
 					    sample application.
 					</h2>
-					<p><%= link_to "Sign up now!", '#', class: "btn btn-large btn-custom" %></p>
+					<p><%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-custom" %></p>
 				</div>
 			</div>	
 		</div>
@@ -38,7 +38,7 @@
 					    <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
 					    sample application.
 					</p>
-					<p><%= link_to "Sign up now!", '#', class: "btn btn-large btn-custom" %></p>
+					<p><%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-custom" %></p>
 				</div>
 			</div>	
 		</div>
@@ -54,7 +54,7 @@
 					    <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
 					    sample application.
 					</h2>
-					<p><%= link_to "Sign up now!", '#', class: "btn btn-large btn-custom" %></p>
+					<p><%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-custom" %></p>
 				</div>
 			</div>	
 		</div>
@@ -62,7 +62,7 @@
 	</div><!--/.carousel-inner-->
 
 	<!-- Controls -->
-	<a class="left carousel-control" href="#myCarousel" data-slide="prev"><%= fa_icon("prev") %></a>
+	<a class="left carousel-control" href="signup_path"yCarousel" data-slide="prev"><%= fa_icon("prev") %></a>
 	<a class="right carousel-control" href="#myCarousel" data-slide="next"><%= fa_icon("next", class:"img-circle") %></a>
 
 </div><!--/.carousel-->	

@@ -8,6 +8,7 @@
 #  created_at      :datetime
 #  updated_at      :datetime
 #  password_digest :string(255)
+#  remember_token  :string(255)
 #
 
 require 'spec_helper'
@@ -22,6 +23,7 @@ describe User do
 	it { should respond_to(:password_digest) }
 	it { should respond_to(:password) }
 	it { should respond_to(:password_confirmation) }
+	it { should respond_to(:remember_token) }
 	it { should respond_to(:authenticate) }
 
 
@@ -86,6 +88,11 @@ describe User do
 		it { should_not be_valid }
 	end
 
+	describe "with password that is too short" do
+		before { @user.password = @user.password_confirmation = "a" * 5 }
+		it { should_not be_valid }
+	end	
+
 	describe "return value of authenticate method" do
 		before { @user.save }
 		let(:found_user) { User.find_by(email: @user.email) }
@@ -95,19 +102,18 @@ describe User do
 		end
 
 		describe "with invalid password" do
-			let(:user_for_invalid_password) { found_user.authenticate("invalid") }
+			let(:user_for_invalid_password) { found_user.authenticate("Invalid") }
 
 			it { should_not eq user_for_invalid_password }
 			specify { expect(user_for_invalid_password).to be_false }
 		end
 	end
 
-	describe "with password that is too short" do
-		before { @user.password = @user.password_confirmation = "a" * 5 }
-		it { should_not be_valid }
-	end	
 
-	
+	describe "remember token" do
+	    before { @user.save }
+	    its(:remember_token) { should_not be_blank }
+	end
 
 
 

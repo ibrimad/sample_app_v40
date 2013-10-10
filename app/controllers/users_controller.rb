@@ -3,8 +3,8 @@ class UsersController < ApplicationController
 	def create
 		@user = User.new(user_params)
 		if @user.save
-			redirect_to @user, 			
-			success: "Welcome to my Web site!"
+			sign_in @user
+			redirect_to @user, success: "Welcome to my Web site!"
 		else
 			render 'new'
 		end
